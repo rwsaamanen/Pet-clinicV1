@@ -8,7 +8,9 @@ import {
 } from 'react-router-dom'
 
 import Root from './routes/root'
-import { Login } from './containers';
+import { About, AdminDashboard, DashboardWrapper, Home, Login } from './containers';
+import { UserProvider } from './contexts/UserContext';
+import PetDetails from './containers/petdetails/PetDetails';
 
 // Router
 
@@ -18,8 +20,26 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
+        path: "about",
+        element: <About />
+      },
+      {
+        path: "/",
+        element: <Home />,
+      }, 
+      {
         path: "login",
         element: <Login />
+      },
+      {
+        path: "dashboard",
+        element: <DashboardWrapper />,
+        children: [
+          {
+            path: "pet/:petId",
+            element: <PetDetails />
+          }
+        ]
       }
     ]
   },
@@ -30,7 +50,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   </React.StrictMode>
 );
 

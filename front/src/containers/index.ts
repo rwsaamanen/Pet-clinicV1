@@ -1,1 +1,6 @@
 export { default as Login } from './login/Login'
+export { default as About } from './about/About'
+export { default as Home } from './home/Home'
+export { default as UserDashboard } from './dashboard/UserDashboard'
+export { default as AdminDashboard } from './dashboard/AdminDashboard'
+export { default as DashboardWrapper } from './dashboard/DashboardWrapper'

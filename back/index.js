@@ -24,7 +24,7 @@ var corsOptions = {
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 
-
+console.log("Server running")
 
 var login = require('./login');
 var checkAuthHeader = require('./checkAuth');
