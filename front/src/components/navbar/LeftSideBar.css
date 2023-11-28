@@ -1,0 +1,46 @@
+.dropdown-content {
+    position: relative;
+    margin-left: 8px;
+    margin-top: 10px;
+  }
+  
+  .dropdown-line {
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgb(55 65 81);
+  }
+  
+  .dropdown-enter-active .dropdown-line,
+  .dropdown-exit .dropdown-line {
+    height: 100%;
+  }
+  
+  .dropdown-enter {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  .dropdown-enter-active {
+    max-height: 250px;
+    opacity: 1;
+  }
+  
+  .dropdown-exit {
+    max-height: 250px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  .dropdown-exit-active {
+    max-height: 0;
+    opacity: 0.5;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
